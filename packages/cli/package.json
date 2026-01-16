@@ -18,10 +18,10 @@
     "@vlcn.io/type-gen-ts-adapter": "workspace:*",
     "commander": "^11.0.0",
     "expect": "^29.6.1",
-    "typescript": "^5.1.6"
+    "typescript": "~5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^20.4.0"
+    "@types/node": "~22.19.7"
   },
   "peerDependencies": {
     "prettier": "^3.0.1"

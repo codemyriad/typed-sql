@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "rootDir": "./src",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "module": "nodenext",
+    "moduleResolution": "NodeNext"
   },
   "include": ["./src/"],
   "references": [{ "path": "../type-gen-ts-adapter" }]

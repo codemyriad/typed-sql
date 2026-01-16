@@ -5,7 +5,7 @@
     "module": "esnext",
     "target": "esnext",
     "skipLibCheck": true,
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "baseUrl": "./src/",
     "declaration": true,
     "allowJs": true,

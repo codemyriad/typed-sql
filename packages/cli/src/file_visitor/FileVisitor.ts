@@ -35,6 +35,7 @@ import { normalize, replaceRange } from "../util.js";
 import fs from "fs/promises";
 import path from "path";
 import { Options } from "../Analyzer.js";
+import type { Plugin as PrettierPlugin } from "prettier";
 
 // if the prettier dependency is missing, we use this to stub it.
 const prettierAndOptionsStub = [
@@ -82,7 +83,9 @@ async function format(filePath: string, contents: string): Promise<string> {
       }
       if (typeof plugin === "object") {
         if (
-          plugin.languages?.find((language) =>
+          // TODO: this is a temp fix to handle newer prettier versions,
+          // check this and handl in a more robust manner
+          (plugin as PrettierPlugin).languages?.find((language) =>
             language.name.toLowerCase().includes("sql")
           )
         ) {
